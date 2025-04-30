@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Button, Grid, Box } from '@mui/material';
 import { motion } from 'framer-motion';
+import logo from '../assets/logo_coloured.png';
 
 const MotionBox = motion(Box);
 
@@ -44,7 +45,7 @@ function HeroSection() {
       <Grid item xs={12} md={6}>
         <MotionBox
           component="img"
-          src="/logo_coloured.png" 
+          src= {logo}
           alt="App preview"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
