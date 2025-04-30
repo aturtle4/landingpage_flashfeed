@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flashfeed/static/css/main.db77dc61.css",
+    "main.js": "/flashfeed/static/js/main.3fc88408.js",
+    "index.html": "/flashfeed/index.html",
+    "main.db77dc61.css.map": "/flashfeed/static/css/main.db77dc61.css.map",
+    "main.3fc88408.js.map": "/flashfeed/static/js/main.3fc88408.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db77dc61.css",
+    "static/js/main.3fc88408.js"
+  ]
+}
