@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { CssBaseline, Box } from '@mui/material';
+import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
+import Footer from './components/Footer';
+import Loader from './components/Loader';
+import './App.css'; // Import CSS for snap scrolling
+import Navbar from './components/Navbar';
+import AppScreenshots from './components/AppScreenshots';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 650);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <div className="app-container">
+        <Navbar />
+        <div className="section"><HeroSection /></div>
+        <div className="section"><FeaturesSection /></div>
+        {/* <AppScreenshots /> */}
+        <Footer />
+      </div>
+    </>
   );
 }
 
